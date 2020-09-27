@@ -57,7 +57,7 @@ import java.util.Scanner;
 
 public class Rock_Lever {
 
-    public static long max_set_bit(long n) {
+    public static long max_set_bit(long n) { //finding the maximum set bit in the integer
         long c = 0;
         while (n >= Math.pow(2, c)) c++;
         return c;
@@ -79,7 +79,7 @@ public class Rock_Lever {
                 bit[(int) x]++;
             }
             for (int j = 1; j < 31; j++) {
-                sum += ((bit[j] * (bit[j] - 1)) / 2);
+                sum += ((bit[j] * (bit[j] - 1)) / 2);  //for i<j how many pairs you can form
             }
             System.out.println(sum);
             t=t-1;
