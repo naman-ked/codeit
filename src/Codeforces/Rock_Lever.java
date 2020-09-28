@@ -64,10 +64,10 @@ public class Rock_Lever {
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int t = sc.nextInt();
-        while (t > 0) {
-            int n = sc.nextInt();
+        Scanner sc = new Scanner(System.in); //calling the scanner class
+        int t = sc.nextInt(); //no. of test cases
+        while (t > 0) {      //while loop for eah test case
+            int n = sc.nextInt();  //no of elements in an array
             long a[] = new long[n];
             for (int i = 0; i < n; i++) {
                 a[i] = sc.nextInt();
