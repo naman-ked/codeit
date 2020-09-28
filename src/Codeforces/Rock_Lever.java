@@ -82,7 +82,7 @@ public class Rock_Lever {
                 sum += ((bit[j] * (bit[j] - 1)) / 2);  //for i<j how many pairs you can form
             }
             System.out.println(sum);
-            t=t-1;
+            t--;
         }
 
     }

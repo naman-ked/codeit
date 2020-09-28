@@ -60,7 +60,7 @@ public class Cube_Sorting {
                 a[i] = sc.nextInt();
             }
             int flag=0;
-            t = t - 1;
+            t--;
             for (int i = 0; i < n - 1; i++) {
                 if (a[i] <= a[i + 1]) {
                     System.out.println("YES");
