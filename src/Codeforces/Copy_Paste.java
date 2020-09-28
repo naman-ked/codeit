@@ -1,4 +1,4 @@
-/*
+/* Copy Paste
 BThero is a powerful magician. He has got n piles of candies, the i-th pile initially contains ai candies. BThero can cast a copy-paste spell as follows:
 
 He chooses two piles (i,j) such that 1≤i,j≤n and i≠j.
