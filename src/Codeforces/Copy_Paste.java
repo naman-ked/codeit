@@ -49,7 +49,7 @@ public class Copy_Paste {
             else{
                 System.out.println(0);
             }
-            t=t-1;
+            t--;
         }
     }
 }

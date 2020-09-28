@@ -49,23 +49,19 @@ public class Two_Arrays {
             for (int i = 0; i < n; i++) {
                 a[i] = sc.nextInt();
             }
-            Arrays.sort(a);
-            int i=0,j=n-1;
-            int cl=0,dl=0;
-            int c[] = new int[n];
-            int d[] = new int[n];
-            while(i<j){
-                if(a[i]+a[j]>=T){
-                    d[cl]=a[j];
-                    cl++;
-                    j--;
+            int flag=1,r=0;
+            for(int i=0;i<n;i++){
+                if(T%2==0 && a[i]==(T/2)) {
+                    r = flag;
+                    flag = flag ^ 1;
                 }
                 else{
-                 c[dl]=a[i];
-                 dl++;
-                 i++;
+                    if(T<2*a[i])r=1;
+                    else r=0;
                 }
+                System.out.print(r+ " ");
             }
+            System.out.println();
             t=t-1;
         }
     }

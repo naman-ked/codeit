@@ -50,5 +50,6 @@ public class k_Amazing {
             Arrays.sort(a);
 
         }
+        t--;
     }
 }
