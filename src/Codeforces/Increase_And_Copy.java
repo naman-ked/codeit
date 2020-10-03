@@ -35,24 +35,21 @@ public class Increase_And_Copy {
         int t = sc.nextInt();
         while (t > 0) {
             long n = sc.nextInt();
-            int a = 0,b = 0;
             if(n==1){
                 System.out.println(0);
             }
             else {
-                for (int i = 2; i <= n; i++) {
-                    if ((n / i) <= i) {
-                        a = i;
+                int c=0;
+                if(n%2!=0){n--;c=1;}
+                int a = 0;
+                for (int i = 1; i <= n; i++) {
+                    if ((n / (i + 1)) <= i && (n / i) >= i) {
+                        a = (int) (i + (n / i) - 2);
                         break;
                     }
                 }
-                if(n%2==0){
-                    b= (int) ((n/a)-1);
-                }
-                else{
-                   b= (int) (n/a);
-                }
-                System.out.println(a + b - 1);
+                if(c==1)a++;
+                System.out.println(a);
             }
             t--;
         }
