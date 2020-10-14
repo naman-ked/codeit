@@ -29,10 +29,23 @@ Constraints:
 1 ≤ N ≤ 500000
 0 ≤ C[i] ≤ 1
  */
-package GeeksforGeeks;
+package DataStructures;
 
-public class Transition_Point {
+import java.util.HashMap;
+//Hash Map data structure
+public class Hash_Map {
     public static void main(String[] args) {
-
+       int a=10;
+       int b=3;
+       int c=30;
+       //taking integer
+        HashMap<String,Integer> happy= new HashMap<String,Integer>();
+        happy.put("a",10 );
+        happy.put("b", 3);
+        happy.put("c", 30);
+        happy.remove("a");
+        System.out.println(happy);
+        System.out.println(happy.get("c"));
+        System.out.println(happy.containsValue(30));
     }
 }
