@@ -18,7 +18,7 @@ package Practice;
 
 import java.util.Arrays;
 import java.util.Scanner;
-
+//Time: O(Nlog(N)+Mlog(M)) Space:O(1)
 public class P1_Smallest_Difference {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
