@@ -12,6 +12,7 @@ package Practice;
 
 import java.util.Scanner;
 //Time: O(N) Space:O(1)
+//iterative method
 public class P2_Nth_Fibonacci {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
