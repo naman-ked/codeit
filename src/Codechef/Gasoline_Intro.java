@@ -8,7 +8,6 @@ public class Gasoline_Intro {
         int t = sc.nextInt();
         while (t-- > 0) {
             int n = sc.nextInt();
-            long sum=0;
             long a[] = new long[n];
             for (int i = 0; i < n; i++) {
                 a[i] = sc.nextInt();
@@ -17,7 +16,8 @@ public class Gasoline_Intro {
                 System.out.println(0);
             }
             else {
-                long fuel=a[0],sum=a[0];
+                long fuel=a[0];
+                long sum=a[0];
                 for(int i=1;i<n;i++){
                     sum=sum+a[i];
                     fuel=fuel+a[i]-1;
