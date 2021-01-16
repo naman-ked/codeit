@@ -36,39 +36,56 @@ Example Output
 
 package Codechef;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class RESTORE {
-    public static void main(String[] args) {
-        Scanner sc= new Scanner(System.in);
-        int t= sc.nextInt();
-        while(t-->0)
-        {
-            int n= sc.nextInt();
-            int a[]= new int[n];
-            int b[]= new int[n];
-            for(int i=0; i<n; i++)
-                b[i]= sc.nextInt();
+    static int max_INT=4000001;
+    static ArrayList<Integer> number;
+    static boolean prime[]=new boolean[max_INT];
 
-            int j=1;
-            for(int i=n-1; i>=0; i--)
-            {
-                if(b[i]==(i+1))
-                {
-                    a[i]=j;
-                    j++;
-                }
-                else
-                {
-                    a[i]=a[b[i]-1];
-                }
-            }
-            for(int i=0; i<n; i++)
-            {
-                System.out.print(a[i]+" ");
-            }
-            System.out.println();
+    public static void f(){
+        number=new ArrayList<>();
+        for(int i=0;i<max_INT;i++){
+            prime[i]=true;
         }
+        for(int p=2;p*p<max_INT;p++){
+            if(prime[p]){
+                for(int i=p*p;i<max_INT;i+=p){
+                    prime[i]=false;
+                }
             }
+        }
+        for(int i=2;i<max_INT;i++){
+            if(prime[i])
+                number.add(i);
+        }
+    }
+
+
+    public static void main(String args[]) {
+        Scanner sc=new Scanner(System.in);
+        int t=sc.nextInt();
+        f();
+        while(t-->0){
+            int n=sc.nextInt();
+            int b[]=new int[n];
+            ArrayList<Integer>a=new ArrayList<>();
+            HashMap<Integer,Integer>map=new HashMap<>();
+            for(int i=0;i<n;i++){
+                b[i]=sc.nextInt();
+                map.put(b[i],map.getOrDefault(b[i],0)+1);
+
+            }
+            for(int i=0;i<n;i++){
+                a.add(number.get(b[i]));
+                map.put(b[i],map.get(b[i])-1);
+            }
+            for(int i:a){
+                System.out.print(i+" ");
+            }System.out.println();
+        }
+    }
     }
