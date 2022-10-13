@@ -21,25 +21,22 @@ export default function App() {
   );
 }
 //Child component A & B
-
+//with hook
+import { useContext } from "react";
 import {myContext} from "./App";
 export default function A() {
+  const context=useContext(myContext)
   return (
     <div>
-      <h1>A component</h1>
-      <myContext.Consumer>
-      {data=><>
-      <h3>{data.name}</h3>
-      <h2>{data.roll}</h2>
-      </>
-      }
-      </myContext.Consumer>
-      
+      <h1>A component</h1> 
+      <h3>{context.name}</h3>
+      <h2>{context.roll}</h2>
     </div>
   );
 }
 
 
+//without hook
 import {myContext} from "./App";
 
 export default function B({ name }) {
