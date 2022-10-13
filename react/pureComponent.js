@@ -23,3 +23,11 @@ render(){
 }
 }
 export default App;
+
+
+/**
+shouldCmponentUpdate()
+Parameters: It accepts two parameters named nextProps and nextState. 
+The shouldComponent returns the boolean of whether to return the component or not, by comparing the existing prop and state with the nextProps and nextState.
+Return Value: This method by default returns true that means the component will re-render and if it returns false then the  
+render(), componentWillUpdate(), and componentDidUpdate() method does not gets invoked.
