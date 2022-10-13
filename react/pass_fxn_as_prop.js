@@ -7,15 +7,15 @@ function Child({handleClick}) {
 export default function App() {
   const [count, setCount] = useState(0);
 
-  function handleClick() {
-    setCount(count + 1);
+  function handleClick(event,num) {
+    setCount(count + 1 + num);
   }
 
   return (
     <div>
       <h2>Count is: {count}</h2>
 
-      <Child handleClick={handleClick} />
+      <Child handleClick={(event)=>{handleClick(event,100)}} />
     </div>
   );
 }
