@@ -48,3 +48,40 @@ class App extends React.Component {
 }
   
 export default App;
+
+//function component
+import { useEffect, useState } from "react";
+import "./styles.css";
+
+export default function App() {
+  const [name, setName] = useState("naman");
+
+  useEffect(() => {
+    console.log("component Render");
+  });
+
+  useEffect(() => {
+    console.log("componentDidMount");
+  }, []);
+
+  useEffect(() => {
+    console.log("componentDidUpdate");
+  }, [name]);
+
+  useEffect(() => {
+    return () => {
+      console.log("component will mount");
+    };
+  }, []);
+
+  return (
+    <div className="App">
+      <h1>Hello CodeSandbox</h1>
+      <h2>Start editing to see some magic happen!</h2>
+
+      <h3>Life Cycle methods</h3>
+      <button onClick={()=>{setName(name+".")}}>Click</button>
+      <h4>{name}</h4>
+    </div>
+  );
+}
