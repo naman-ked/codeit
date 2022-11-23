@@ -21,12 +21,15 @@ Explanation: Fours magic triplets are
  
 
 Your Task:
-You don't need to read or print anything. Your task is to complete the function countTriplets() which takes the array nums[] as input parameter and returns the number of magic triplets in the array.
+You don't need to read or print anything. Your task is to complete the function countTriplets() which takes the array nums[] as input parameter and 
+returns the number of magic triplets in the array.
 
  
 Expected Time Complexity: O(N2) 
 Expected Space Complexity: O(1)
 */
+
+
 class Solution{
     public int countTriplets(int[] nums){
         // code here
