@@ -70,7 +70,7 @@ export default function App() {
 
   useEffect(() => {
     return () => {
-      console.log("component will mount");
+      console.log("component will unmount");
     };
   }, []);
 
