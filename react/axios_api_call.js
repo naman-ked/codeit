@@ -1,3 +1,29 @@
+//Post call
+
+var postData = {
+  email: "test@test.com",
+  password: "password"
+};
+
+let axiosConfig = {
+  headers: {
+      'Content-Type': 'application/json;charset=UTF-8',
+      "Access-Control-Allow-Origin": "*",
+  }
+};
+
+axios.post('http://<host>:<port>/<path>', postData, axiosConfig)
+.then((res) => {
+  console.log("RESPONSE RECEIVED: ", res);
+})
+.catch((err) => {
+  console.log("AXIOS ERROR: ", err);
+})
+
+
+
+
+
 //Class component
 import axios from "axios";
 import {Component} from "react";
