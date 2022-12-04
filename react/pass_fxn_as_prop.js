@@ -21,7 +21,7 @@ export default function App() {
 }
 
 
-//Child to parent passing data
+//Child to parent passing data and click event
 
 import { useState } from "react";
 import "./styles.css";
