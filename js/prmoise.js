@@ -1,33 +1,10 @@
-<!DOCTYPE html>
-<html>
-<body>
-
-<h2>JavaScript Promise</h2>
-
-<p id="demo"></p>
-
-<script>
-function myDisplayer(some) {
-  document.getElementById("demo").innerHTML = some;
-}
-
-let myPromise = new Promise(function(myResolve, myReject) {
-  let x = 0;
-
-// some code (try to change x to 5)
-
-  if (x == 0) {
-    myResolve("OK");
-  } else {
-    myReject("Error");
-  }
-});
+const myPromise= new Promise((resolve,reject)=>{
+    const x=false;
+    if(x) resolve("Hello");
+    else reject("Bye");
+})
 
 myPromise.then(
-  function(value) {myDisplayer(value);},
-  function(error) {myDisplayer(error);}
-);
-</script>
-
-</body>
-</html>
+    (val)=>{console.log(val)},
+    (val)=>{console.warn(val)}
+    );
