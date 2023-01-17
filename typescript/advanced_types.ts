@@ -99,3 +99,16 @@ function add2(a:Combinable, b:Combinable){
 const result = add2(5,5);
 result.toPrecision(1);
 
+//optional chaining
+const fetchedUserData = {
+    id:'ul',
+    name:'Naman',
+    role: {job:'learn', subject:'ts'}
+};
+console.log(fetchedUserData?.role?.subject);
+
+//nullish coalescing
+const value= ''; //only for null or undefined
+const  storedData = value ?? 'DEFAULT';
+
+console.log(storedData);
