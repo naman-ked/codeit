@@ -58,3 +58,20 @@ textStorage.addItem("Kedia");
 console.log(textStorage.getItems());
 
 //generic utility types
+//partial type
+interface CourseGoal {
+    title: string;
+    description: string;
+    day : Date;
+}
+
+function createCourseGoal(title:string , description: string , day:Date): CourseGoal{
+    let courseGoal: Partial<CourseGoal> ={};
+    courseGoal.title=title;
+    courseGoal.description=description;
+    courseGoal.day=day;
+    return courseGoal as CourseGoal;
+}
+//locked array
+const names: Readonly<string[]>=["max", "ana"];
+//error : names.push("manu");
