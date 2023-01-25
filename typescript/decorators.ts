@@ -117,3 +117,72 @@ class Printer{
 const p = new Printer();
 const button = document.querySelector('button')!;
 button.addEventListener('click',p.showMessage);
+
+//validator
+interface ValidatorConfig {
+  [property: string]: {
+    [validatableProp: string]: string[]; //['required','positive']
+  };
+}
+
+const registeredValiators: ValidatorConfig = {};
+
+function Required(target: any, propName: string) {
+  registeredValiators[target.constructor.name] = {
+    [propName]: ["required"],
+  };
+}
+
+function Positive(target: any, propName: string) {
+  registeredValiators[target.constructor.name] = {
+    [propName]: ["positive"],
+  };
+}
+function Validate(obj: any) {
+  const objectValidators = registeredValiators[obj.constructor.name];
+  if (!objectValidators) {
+    return true;
+  }
+  let isValid = true;
+  for (const prop in objectValidators) {
+    for (const validator of objectValidators[prop]) {
+      switch (validator) {
+        case "required":
+          isValid = isValid && !!obj[prop];
+        case "positive":
+          isValid = isValid && obj[prop] > 0;
+      }
+    }
+  }
+  return isValid;
+}
+
+class Course {
+  @Required
+  title: string;
+  @Positive
+  price: number;
+
+  constructor(t: string, p: number) {
+    this.title = t;
+    this.price = p;
+  }
+}
+
+const courseForm = document.querySelector("form")!;
+courseForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const titleEl = document.getElementById("title") as HTMLInputElement;
+  const priceEl = document.getElementById("price") as HTMLInputElement;
+
+  const title = titleEl.value;
+  const price = +priceEl.value;
+
+  const createCourse = new Course(title, price);
+
+  if (!Validate(createCourse)) {
+    alert("invalid input");
+  }
+  console.log(createCourse);
+});
+
