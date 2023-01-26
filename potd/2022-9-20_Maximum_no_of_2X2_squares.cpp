@@ -1,12 +1,10 @@
 /*
 Given the base (in units) of a right-angled isoceles traingle, find the maximum number of 2X2 squares that can fit in the triangle with given base.
 
-Example 1:
+Example 1: 
 Input: 8
 Output: 6
 */
-
-
 class Solution
 {
     public:
