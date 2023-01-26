@@ -10,7 +10,6 @@ Find the maximum value of G that can be obtained.
 The array may contain duplicate elements.
 
 Example 1:
-
 Input:
 N = 5
 K = 4
