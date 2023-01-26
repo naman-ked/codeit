@@ -1,9 +1,7 @@
 /*
 You are given an array arr[] of size n. Find the total count of sub-arrays having their sum equal to 0.
 
-
 Example 1:
-
 Input:
 n = 6
 arr[] = {0,0,5,5,0,0}
