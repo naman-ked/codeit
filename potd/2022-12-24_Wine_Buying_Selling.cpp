@@ -1,5 +1,8 @@
 /*
-Given an array, Arr[] of size N represents N house built along a straight line with equal distance between adjacent houses. Each house has a certain number of wine and they want to buy/sell those wines to other houses. Transporting one bottle of wine from one house to an adjacent house results in one unit of work. The task is to find the minimum number of work is required to fulfill all the demands of those N houses.
+Given an array, Arr[] of size N represents N house built along a straight line with equal distance between adjacent houses. 
+Each house has a certain number of wine and they want to buy/sell those wines to other houses. 
+Transporting one bottle of wine from one house to an adjacent house results in one unit of work.
+The task is to find the minimum number of work is required to fulfill all the demands of those N houses.
 
 if arr[i] < 0, then ith house wants to sell arr[i] number of a wine bottle to other houses.
 if arr[i] > 0, then ith house wants to buy arr[i] number of a wine bottle from other houses.
