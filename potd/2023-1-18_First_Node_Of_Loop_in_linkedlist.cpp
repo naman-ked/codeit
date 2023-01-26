@@ -1,7 +1,7 @@
 /*
 Find the first node of loop in linked list
-
-Given a singly linked list of N nodes. Find the first node of the loop if the linked list has a loop. 
+Given a singly linked list of N nodes.
+Find the first node of the loop if the linked list has a loop. 
 If a loop is present return the node data of the first node of the loop else return -1.
 */
 
