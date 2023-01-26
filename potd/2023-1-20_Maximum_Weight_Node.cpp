@@ -5,7 +5,8 @@ Edge[i] is -1 if the ith cell doesn't have an exit.
 The task is to find the cell with maximum weight (The weight of a cell is the sum of cell indexes of all cells pointing to that cell).
 If there are multiple cells with the maximum weight return the cell with highest index.
 
-Note: The cells are indexed with an integer value from 0 to N-1. If there is no cell pointing to the ith cell then the weight of the i'th cell is zero.
+Note: The cells are indexed with an integer value from 0 to N-1. 
+If there is no cell pointing to the ith cell then the weight of the i'th cell is zero.
 
 Example 1:
 
