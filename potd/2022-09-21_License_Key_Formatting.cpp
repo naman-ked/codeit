@@ -20,11 +20,11 @@ class Solution
         int count = 0;
         int n=S.size();
         //upper case
-        for(int i=0;i<n;i++) {
+        for(int i=0;i<n;i++){
              if(S[i] >= 97 && S[i] <= 122) S[i] = toupper(S[i]);
         }
         //remove dashes
-        for(int i=0;i<n;i++) {
+        for(int i=0;i<n;i++){
              if(S[i] !='-') res+=S[i];
         }
         S=res;
