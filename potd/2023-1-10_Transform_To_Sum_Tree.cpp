@@ -3,9 +3,7 @@ Given a Binary Tree of size N , where each node can have positive or negative va
 Convert this to a tree where value of each node will be the sum of the values of all the nodes in left and right sub trees of the original tree. 
 The values of leaf nodes are changed to 0.Note: You have to modify the given tree in-place.
 
-
 Example 1:
-
 Input:
              10
           /      \
