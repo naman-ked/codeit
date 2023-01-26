@@ -20,4 +20,3 @@ Explanation:
 6th contiguous subarray = {5 2 3} Max = 5
 7th contiguous subarray = {2 3 6} Max = 6
 */
-
