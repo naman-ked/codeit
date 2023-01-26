@@ -16,8 +16,7 @@ class Solution
     public:
     //Function to perform case-specific sorting of strings.
     string caseSort(string str, int n)
-    {
-     
+    {     
         int u=0,l=0;
         string res="";
         string uch="",lch="";
