@@ -6,7 +6,6 @@ Your task is to find the string with minimum length after applying the above ope
 Note: If the string length become zero after applying operations, return "-1" as a string.
 
 Example 1:
-
 Input:
 aaabbaaccd
 Output: 
