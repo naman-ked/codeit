@@ -11,8 +11,7 @@ C = 6, D = 10
 Output:
 Minimum number of moves: 1
 Explanation:
-Fold the carpet by breadth, 13/2 i.e. 6, 
-so now carpet is 6*8 and can fit fine.
+Fold the carpet by breadth, 13/2 i.e. 6, so now carpet is 6*8 and can fit fine.
 */
 
 class Solution{
