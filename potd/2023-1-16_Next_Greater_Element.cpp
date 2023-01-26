@@ -8,7 +8,8 @@ next greater of the last element is always -1.
 Example 1:
 
 Input: 
-n = 4, arr[] = [1 3 2 4]
+n = 4,
+arr[] = [1 3 2 4]
 Output:
 3 4 4 -1
 */
