@@ -5,10 +5,9 @@ We want to reformat the string S, such that each group contains exactly K charac
 which could be shorter than K but still must contain at least one character. Furthermore, there must be a dash inserted between two groups, 
 and you should convert all lowercase letters to uppercase.
 Return the reformatted string.
-Example 1:
 
-Input: 
-S = "5F3Z-2e-9-w", K = 4
+Example 1:
+Input:   S = "5F3Z-2e-9-w", K = 4
 Output: "5F3Z-2E9W"
 */
 
