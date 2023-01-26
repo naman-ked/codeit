@@ -1,6 +1,5 @@
 /*
 Given an array of integers and a number k, write a function that returns true if given array can be divided into pairs such that sum of every pair is divisible by k.
- 
 
 Example 1 :
 
@@ -16,6 +15,7 @@ Input : arr = [2, 4, 1, 3], k = 4
 Output: False
 Explanation: There is no possible solution.
 */
+
 class Solution {
   public:
     bool canPair(vector<int> nums, int k) {
