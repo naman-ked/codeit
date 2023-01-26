@@ -1,5 +1,7 @@
 /*
-Akku likes binary numbers and she likes playing with these numbers. Her teacher once gave her a question.For given value of  L and R, Akku have to find the count of number X, which have only three-set bits in it's binary representation such that "L ≤ X ≤ R".Akku is genius, she solved the problem easily. Can you do it ??
+Akku likes binary numbers and she likes playing with these numbers. 
+Her teacher once gave her a question.For given value of  L and R, Akku have to find the count of number X, 
+which have only three-set bits in it's binary representation such that "L ≤ X ≤ R".Akku is genius, she solved the problem easily. Can you do it ??
 
 Example 1:
 
