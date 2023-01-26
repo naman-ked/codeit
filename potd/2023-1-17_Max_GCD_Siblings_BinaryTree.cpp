@@ -12,9 +12,7 @@ Return 0 if input tree is empty i.e level of tree is -1.
 Consider those nodes which have a sibling.
 Return 0 if no such pair of siblings found.
  
-
 Example 1:
-
 Input:
               4
             /   \
