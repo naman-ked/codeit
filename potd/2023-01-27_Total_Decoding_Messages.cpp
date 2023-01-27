@@ -24,9 +24,9 @@ Explanation: "90" cannot be decoded as it's an invalid string and we cannot deco
 
 class Solution {
 	public:
-		int CountWays(string s){
-		    int m=1e9+7;
-		    int n=s.length();
+	int CountWays(string s){
+	int m=1e9+7;
+	int n=s.length();
         int count[n+1]; 
         count[0] = 1;
         count[1] = 1;
