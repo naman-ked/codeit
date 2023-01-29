@@ -14,7 +14,6 @@ Explanantion:In first operation replace a = a&4 = 4after that replace b = b&6 = 
 class Solution {
   public:
     int solve(int a, int b) {
-        // code here
         if(a==b) return 0;
         int c=a&b;
         if(c==a || c==b) return 1;
