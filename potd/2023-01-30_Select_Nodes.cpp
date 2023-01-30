@@ -28,7 +28,7 @@ class Solution{
       bool select=false;
       for(auto child:adj[i])
       {
-          if(!vis[child] and !dfs(adj,child))select=true;   
+          if(!vis[child] and !dfs(adj,child)) select=true;   
       }
       if(select)count++;
       return select;
@@ -36,8 +36,8 @@ class Solution{
     
     int countVertex(int N, vector<vector<int>>edges){
         // code here
-        vis=vector<int>(N+1,0);
-        vector<int> adj[N+1];
+        vis=vector<int>(N+1,0); 
+        vector<int> adj[N+1];  //dont use vector<vector<int>>
         for(auto ele:edges){
             adj[ele[0]].push_back(ele[1]);
             adj[ele[1]].push_back(ele[0]);
