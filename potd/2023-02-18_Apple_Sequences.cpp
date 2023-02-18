@@ -5,21 +5,16 @@ Find the longest sequence of apples you can make, given a string and the value o
 
 Example 1:
 Input:
-N = 5
-M = 1
-arr[] = 'AAOAO'
+N = 5 M = 1 arr[] = 'AAOAO'
 Output: 4 
 Explanation: Changing the orange at 3rd position into an apple gives us the maximum possible answer.
 
 Example 2:
 Input:
-N = 5
-M = 1
-arr = 'AOOAO'
+N = 5 M = 1 arr = 'AOOAO'
 Output: 2
 Explanation: Changing any orange into an apple will give us a sequence of length 2.
 */
-
 
 class Solution{   
 public:
