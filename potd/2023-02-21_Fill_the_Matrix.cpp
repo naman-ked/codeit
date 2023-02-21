@@ -14,6 +14,12 @@ class Solution{
 public:
     int minIteration(int N, int M, int x, int y){    
         // code here
+        //first approach
+        int r,c;
+        r=max(x-1,N-x);
+        c=max(y-1,M-y);
+        return r+c;
+        //second approach
         vector<vector<int>> arr;
         for(int i=0;i<N;i++){
              vector<int> a(M,0);
