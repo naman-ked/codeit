@@ -9,7 +9,6 @@ N = 2, M = 3
 X = 2, Y = 3
 Output: 3 
 */
-
 class Solution{   
 public:
     int minIteration(int N, int M, int x, int y){    
