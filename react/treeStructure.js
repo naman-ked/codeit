@@ -63,11 +63,11 @@ export default function Tree(props) {
         </div>
       </div>
     );
-  } else {
-    return (
-      <div>
-        <h3>{props.data.name}</h3>
-      </div>
-    );
-  }
+    } else {
+      return (
+        <div>
+          <h3>{props.data.name}</h3>
+       </div>
+     );
+     }
 }
