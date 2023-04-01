@@ -63,6 +63,7 @@ const renderDropdownItems = (list=[]) => {
     const el= document.createElement('div');
     el.innerHTML= item
     el.classList.add("dropdown-item");
+    el.setAttribute('data-key',item);
     suggFrag.appendChild(el);
   })
   suggestionBox.innerHTML="";
@@ -87,6 +88,13 @@ const handleInputChange = (event) =>{
   
 };
 
+const handleSelect = (event)=>{
+  const {key} = event.target.dataset;
+  if(key){
+    inputBox.value = key;
+    renderDropdownItems();
+  }
+};
 
 const debounce = (fn,delay=5000)=>{
   let timerCtx;
@@ -100,6 +108,6 @@ const debounce = (fn,delay=5000)=>{
 
 (()=>{
   inputBox.addEventListener("input",debounce(handleInputChange,500));
+  suggestionBox.addEventListener('click',handleSelect);
 })();
-
 
