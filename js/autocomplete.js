@@ -34,14 +34,10 @@ input:focus{
 }
 
 .suggestions-wrapper {
-  display:none;
+  display:block;
   max-height:300px;
   overflow-y:scroll;
   border: 1px solid silver;
-}
-
-.suggestions-visible{
-  display:block;
 }
 
 //js
@@ -60,10 +56,6 @@ const getSuggestions = (keyword) =>{
 const inputBox = document.getElementById("search-input");
 const suggestionBox = document.getElementById("suggestion-wrapper");
 
-const resetState = ()=>{
-  suggestionBox.classList.remove("suggestions-visible");
-};
-
 const renderDropdownItems = (list=[]) => {
   const suggFrag = document.createDocumentFragment();
   
@@ -79,12 +71,12 @@ const renderDropdownItems = (list=[]) => {
 
 const handleSearch = async (keyword) => {
   const result = await getSuggestions(keyword);
-  if(result.length){
+  if(result.length!=fruits.length){
     suggestionBox.classList.add("suggestions-visible");
-    renderDropdownItems(result);
+     renderDropdownItems(result);
   }
-  else {
-    resetState();
+  else{
+    renderDropdownItems();
   }
   console.log(result);
 }
@@ -92,6 +84,22 @@ const handleSearch = async (keyword) => {
 const handleInputChange = (event) =>{
   const value= event.target.value;
   handleSearch(value);
+  
 };
 
-inputBox.addEventListener("input",handleInputChange);
+
+const debounce = (fn,delay=5000)=>{
+  let timerCtx;
+  return function(){
+    const self=this;
+    const args= arguments;
+    clearTimeout(timerCtx);
+    timerCtx=setTimeout(()=> fn.apply(self,args),delay);
+  }
+}
+
+(()=>{
+  inputBox.addEventListener("input",debounce(handleInputChange,500));
+})();
+
+
