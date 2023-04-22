@@ -33,3 +33,15 @@ public:
         return result;
     }
 };
+
+//better solution just find the minimum and check for its divisibilty with other numbers
+ int mn = arr[0];
+        for (int i = 0; i < n; i++) {
+            mn = min(mn, arr[i]);
+        }
+        for (int i = 0; i < n; i++) {
+            if (arr[i] % mn != 0) {
+                return 1;
+            }
+        }
+        return mn;
