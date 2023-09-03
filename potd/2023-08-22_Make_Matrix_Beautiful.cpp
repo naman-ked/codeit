@@ -5,7 +5,7 @@ Find the minimum number of operation(s) that are required to make the matrix bea
 In one operation you can increment the value of any one cell by 1.
 
 Example 1:
-Input: N = 2
+Input:  N = 2
 matrix[][] = {{1, 2},{3, 4}}
 Output: 4
 Explanation:
