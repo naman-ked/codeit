@@ -11,9 +11,11 @@ using namespace std;
 #include "mutex"
 
 // Interface which contains method for all vending machine states
+class VendingMachine;
+
 class VMState{
     public:
-    virtual void insertMoney()=0;
+    virtual void insertMoney(VendingMachine* machine)=0;
     virtual void dispenseItem() =0;
 };
 
@@ -21,16 +23,16 @@ class VendingMachine {
     VendingMachine(){}
 	static VendingMachine* vmInstance;
 	static mutex mtx;
-	static VMState* currentState;
+	VMState* currentState;
 	public:
 	static VendingMachine* getVendingMachine();
     void insertMoney(){
-        currentState->insertMoney();
+        currentState->insertMoney(vmInstance);
     }
     void dispenseItem(){
        currentState->dispenseItem();
     }
-    void setState(class VMState* state){
+    void setState(VMState* state){
         currentState = state;
     }
     void getHasMoneyState(){
@@ -38,8 +40,9 @@ class VendingMachine {
     }
 };
 
+
+
 VendingMachine* VendingMachine::vmInstance = nullptr;
-VMState* VendingMachine::currentState = nullptr;
 mutex VendingMachine::mtx;
 
 VendingMachine* VendingMachine::getVendingMachine() {
@@ -54,10 +57,9 @@ VendingMachine* VendingMachine::getVendingMachine() {
 	return vmInstance;
 }
 
-class HasMoneyState : public VMState{
-    VendingMachine* machine;
+class HasMoneyState : public VMState {
     public:
-    void insertMoney() override
+    void insertMoney(VendingMachine* machine) override
     {
         cout<< "Money already inserted. Please select an item."<<endl;
     }
@@ -68,9 +70,8 @@ class HasMoneyState : public VMState{
 };
 
 class IdleState : public VMState {
-    VendingMachine* machine;
     public:
-    void insertMoney() override
+    void insertMoney( VendingMachine* machine) override
     {
         cout<< "Money inserted. Please select an item."<<endl;
         machine->setState(new HasMoneyState());
@@ -83,12 +84,9 @@ class IdleState : public VMState {
 
 int main(){
     VendingMachine* machine = VendingMachine::getVendingMachine();
-    machine->setState(new IdleState());
+    IdleState* d = new IdleState();
+    machine->setState(d);
     machine->insertMoney();
     machine->dispenseItem();
     return 0;  
 }
-
-
-
-
