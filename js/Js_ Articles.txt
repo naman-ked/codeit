@@ -1,7 +1,11 @@
-Hoisting in Javascript
+Hoisting
 https://www.freecodecamp.org/news/javascript-let-and-const-hoisting/
 
-Arrow function in Js
+Arrow function
 https://www.freecodecamp.org/news/regular-vs-arrow-functions-javascript/
+
+Callback function
+https://www.freecodecamp.org/news/javascript-callback-functions-what-are-callbacks-in-js-and-how-to-use-them/
+
 
 
