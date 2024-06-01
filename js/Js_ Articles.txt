@@ -7,5 +7,9 @@ https://www.freecodecamp.org/news/regular-vs-arrow-functions-javascript/
 Callback function
 https://www.freecodecamp.org/news/javascript-callback-functions-what-are-callbacks-in-js-and-how-to-use-them/
 
+Closures
+https://www.freecodecamp.org/news/lets-learn-javascript-closures-66feb44f6a44/
+
+
 
 
