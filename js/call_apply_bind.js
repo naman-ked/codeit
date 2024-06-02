@@ -4,7 +4,7 @@ let name = {
 }
 
 let printFullName = function(hometown,state) {
-  console.log(this.firstName + " " + this.lastname + " from " + hometown + ", " + state)
+  console.log(this.firstname + " " + this.lastname + " from " + hometown + ", " + state)
 }
 
 printFullName.call(name, "Dehradun", "Uttarakhand")
@@ -17,6 +17,6 @@ let name2 = {
 printFullName.call(name2, "Mumbai", "Maharashtra");
 printFullName.apply(name2, ["Mumbai", "Maharashtra"]);
 
-let printName = printFullName.call(name2, "Mumbai", "Maharashtra");
+let printName = printFullName.bind(name2, "Mumbai", "Maharashtra");
 console.log(printName);
 printName();
