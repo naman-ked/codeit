@@ -10,6 +10,9 @@ https://www.freecodecamp.org/news/javascript-callback-functions-what-are-callbac
 Closures
 https://www.freecodecamp.org/news/lets-learn-javascript-closures-66feb44f6a44/
 
+Type Of
+https://www.w3schools.com/js/js_typeof.asp
+
 
 
 
