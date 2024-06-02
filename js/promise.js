@@ -1,3 +1,5 @@
+// link : https://www.programiz.com/javascript/promise
+
 const myPromise= new Promise((resolve,reject)=>{
     const x=false;
     if(x) resolve("Hello");
