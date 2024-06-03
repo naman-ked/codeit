@@ -34,3 +34,21 @@ callsArray.sort((a,b)=>{
 })
 
 console.log(callsArray)
+
+let searchItem = 'J';
+const filteredArray = callsArray.filter((item)=>{
+    return item.name.includes(searchItem);
+})
+
+console.log(filteredArray)
+
+
+{ Jamie: 14, Anna: 3, Sam: 19, Tony: 9, James: 1 }
+[
+  { name: 'James', numOfCalls: 1 },
+  { name: 'Anna', numOfCalls: 3 },
+  { name: 'Tony', numOfCalls: 9 },
+  { name: 'Jamie', numOfCalls: 14 },
+  { name: 'Sam', numOfCalls: 19 }
+]
+[ { name: 'James', numOfCalls: 1 }, { name: 'Jamie', numOfCalls: 14 } ]
