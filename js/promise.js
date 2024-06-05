@@ -59,3 +59,20 @@ Output:
 
 // Promise.any([array of promises]).then(()=>{}).catch(()=>{})
 // returns the first fullfilled promise only  ignores all the errors unless all the promises failed
+
+let prom1 = new Promise((resolve, reject) => {
+	reject("Failure");
+})
+let prom2 = new Promise((resolve, reject) => {
+	reject("Failed to load");
+})
+let prom3 = new Promise((resolve, reject) => {
+	resolve("Worked");
+})
+let prom4 = new Promise((resolve, reject) => {
+	resolve("Successful");
+})
+
+let prom = [prom1, prom2, prom3, prom4];
+
+Promise.any(prom).then((val) => { console.log(val) });
